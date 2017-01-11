@@ -4,7 +4,7 @@
 # [Perhaps you'd prefer the Web Components version](http://github.com/dabeng/OrgChart-Webcomponents)
 
 ## Foreword
-- First of all, thanks a lot for [wesnolte](https://github.com/wesnolte)'s great work:blush: -- [jOrgChart](https://github.com/wesnolte/jOrgChart). The thought that using nested tables to build out the tree-like orgonization chart is amazing. This idea is more simple and direct than its counterparts based on svg.
+- First of all, thanks a lot for [wesnolte](https://github.com/wesnolte)'s great work:blush: -- [jOrgChart](https://github.com/wesnolte/jOrgChart). The thought that using nested tables to build out the tree-like organization chart is amazing. This idea is more simple and direct than its counterparts based on svg.
 - Unfortunately, it's long time not to see the update of jOrgChart. on the other hand, I got some interesting ideas to add, so I choose to create a new repo.
 - Font Awesome provides us with administration icon, second level menu icon and loading spinner.
 
@@ -17,7 +17,7 @@
 - Supports exporting chart as a picture.
 - Supports pan and zoom
 - Users can adopt multiple solutions to build up a huge organization chart(please refer to multiple-layers or hybrid layout sections)
-- touch-enabled plugin for mobile divice
+- touch-enabled plugin for mobile devices
 
 ## Installation
 Of course, you can directly use the standalone build by including dist/js/jquery.orgchart.js and dist/css/jquery.orgchart.css in your webapp.
@@ -91,7 +91,7 @@ $('#chart-container').orgchart({
 ```
 ![local datasource](http://dabeng.github.io/OrgChart/local-datasource/recorder.gif)
 
-- **[I wanna pan&zoom the orgchart](http://dabeng.github.io/OrgChart/pan-zoom/)**
+- **[I wanna pan & zoom the orgchart](http://dabeng.github.io/OrgChart/pan-zoom/)**
 
 ![pan & zoom](http://dabeng.github.io/OrgChart/pan-zoom/recorder.gif)
 
@@ -156,7 +156,7 @@ $('#chart-container').orgchart({
 
 - **[I wanna load data on-demand](http://dabeng.github.io/OrgChart/ondemand-loading-data/)**
 
-Note: when users use ajaxURL option to build orghchart, they must use json datasource(both local and remote are OK) and set the relationship property of datasource by themselves. All of these staff are used to generate the correct expanding/collapsing arrows for nodes.
+Note: when users use ajaxURL option to build orgchart, they must use json datasource(both local and remote are OK) and set the relationship property of datasource by themselves. All of these staff are used to generate the correct expanding/collapsing arrows for nodes.
 ```js
 // sample of core source code
 var datasource = {
@@ -229,9 +229,9 @@ $('#chart-container').orgchart({
 ```
 ![export orgchart](http://dabeng.github.io/OrgChart/export-orgchart/recorder.gif)
 
-- **[I wanna itegrate organization chart with geographic information](http://dabeng.github.io/OrgChart/integrate-map/)**
+- **[I wanna integrate organization chart with geographic information](http://dabeng.github.io/OrgChart/integrate-map/)**
 
-Here, we fall back on [OpenLayers](https://github.com/openlayers/ol3). It's the most aewsome open-source js library for Web GIS you sholdn't miss.
+Here, we fall back on [OpenLayers](https://github.com/openlayers/ol3). It's the most awesome open-source js library for Web GIS you shouldn't miss.
 ```js
 // sample of core source code
 var map = new ol.Map({
@@ -381,7 +381,7 @@ $('#chart-container').orgchart({
 })
 ```
 
-- **[I want a method that can decribe the hierarchy of orgchart](http://dabeng.github.io/OrgChart/get-hierarchy/)**
+- **[I want a method that can describe the hierarchy of orgchart](http://dabeng.github.io/OrgChart/get-hierarchy/)**
 
 That's where getHierarchy() comes in.
 ```html
@@ -467,7 +467,7 @@ This feature is inspired by the issues([Aligning Children Vertical](https://gith
 
 From now on, users never have to worry about how to align a huge of nodes in one screen of browser. The option "verticalDepth" allows users to align child nodes vertically from the given depth.
 
-**Note**: currently, this option is incompatible with many other options or methods, like direction, drag&drop, addChildren(), removeNodes(), getHierarchy() and so on. These conflicts will be solved one by one in the later versions.
+**Note**: currently, this option is incompatible with many other options or methods, like direction, drag & drop, addChildren(), removeNodes(), getHierarchy() and so on. These conflicts will be solved one by one in the later versions.
 
 ```js
 // sample of core source code
@@ -585,7 +585,7 @@ I'm sure that you can grasp the key points of the methods below after you try ou
 ##### $container.orgchart(options)
 Embeds an organization chart in designated container. Accepts an options object and you can go through the "options" section to find which options are required.
 ##### .orgchart('addParent', data, opts)
-Adds parent node(actullay it's always root node) for current orgchart.
+Adds parent node (actually it's always root node) for current orgchart.
 <table>
   <thead>
     <tr><th>Name</th><th>Type</th><th>Required</th><th>Default</th><th>Description</th></tr>
@@ -826,7 +826,7 @@ This method returns you the nodes related to the specified node
 
 This use case is inspired by the [issue](https://github.com/dabeng/OrgChart/issues/25). Thanks [der-robert](https://github.com/der-robert) and [ActiveScottShaw](https://github.com/ActiveScottShaw) for their constructive discussions:blush:
 
-Users can enable/disable exapand/collapse feature with className "noncollapsable" as shown below.
+Users can enable/disable expand/collapse feature with className "noncollapsable" as shown below.
 ```js
 $('.orgchart').addClass('noncollapsable'); // deactivate
 
@@ -865,7 +865,7 @@ $chart.find('.matched').each(function(index, node) {
 When I have a huge orgchart with enabled "pan" option, if I hide all the children of one of the topmost parents then the chart disappear from screen. It seems that we need to add a reset button to keep the chart visible.
 For details, please refer to the [issue](https://github.com/dabeng/OrgChart/issues/85) opened by [manuel-84](https://github.com/manuel-84) :blush:
 
-Users can embed any clear up logics into the click handler of the reset buttton as shown below.
+Users can embed any clear up logics into the click handler of the reset button as shown below.
 ```js
 $('.orgchart').css('transform',''); // remove the tansform settings
 ```
